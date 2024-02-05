@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Validation</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <style>
+    .error-message {
+      color: red;
+    }
+    .row{
+    	margin: 4px 444px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 
+	<div class="row">
+		<div class="container">
+			<form onsubmit="checkpassword(event)">
+				<div class="form-group">
+					<label>Password</label>
+					<input type="Password" name="" class="form-control">
+				</div>
+			</form>
+		</div>
+	</div> -->
+  	<div class="row">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-10">
+			<form  onsubmit="checkpassword(event)">
+				<div class="form-group">
+					<label>Password:</label>
+					<input type="Password" name="" placeholder="Password" class="form-control" id="password">
+				</div>
+
+				<div class="form-group">
+					<label>Confirm Password:</label>
+					<input type="Password" name="" placeholder="Confirm Password:" class="form-control" id="confirmPassword">
+				</div>
+
+				<h5 id="passwordError" class="error-message"></h5>
+ 
+				<input type="submit" name="" class="btn btn-primary btn-hover">
+			</form>
+		</div>
+	</div>
+
+  <!-- <form onsubmit="checkpassword(event)"> -->
+
+<!--     <label>Password:</label>
+    <input type="password" id="password" name="" placeholder="Password">
+ -->
+<!--     <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="" placeholder="confirmPassword">
+
+    <h3 id="passwordError" class="error-message"></h3> -->
+
+    <!-- <input type="submit" value="Submit"> -->
+  <!-- </form> -->
+
+
+
+
+<link rel="stylesheet" type="text/css" href="js/bootstrap.min.js">
+	<script type="text/javascript">
+		function checkpassword(event){
+			event.preventDefault();
+			Password= document.getElementById('password').value;
+			Confirmpassword= document.getElementById('confirmPassword').value;
+			passwordError=document.getElementById('passwordError');
+
+
+		if (password !== confirmPassword) {
+			 passwordError.textContent = "Confirm Password is Wrong";
+		} 
+		else {
+			 passwordError.textContent = "";
+		}
+	}
+	</script>
+</body>
+</html>
